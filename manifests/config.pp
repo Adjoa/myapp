@@ -1,6 +1,6 @@
 class myapp::config(
-  $myapp_port    = '9090',
-  $myapp_version = 'myapp',
+  $myapp_port,
+  $myapp_version,
 ){
   tomcat::config::server::connector { 'tomcat7-myapp-http':
     catalina_base => '/opt/tomcat7/myapp',
