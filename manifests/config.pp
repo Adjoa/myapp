@@ -1,6 +1,6 @@
 class myapp::config(
-  $myapp_port = $myapp_port,
-  $myapp_version = $myapp_version
+  $myapp_port    = hiera('myapp::config::myapp_port'),
+  $myapp_version = hiera('myapp::config::myapp_version'),
 ){
   tomcat::config::server::connector { 'tomcat7-myapp-http':
     catalina_base => '/opt/tomcat7/myapp',
